@@ -1,0 +1,65 @@
+/* Login.css */
+.login-page {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Full height of viewport */
+    background-color: #f7f7f7; /* Light background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    padding: 20px; /* Add padding to avoid edges */
+    box-sizing: border-box; /* Include padding in height calculations */
+}
+
+.login__container {
+    width: 100%; /* Full width to allow responsiveness */
+    max-width: 400px; /* Limit maximum width */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login__container {
+        max-width: 90%; /* Adjust width on smaller screens */
+        padding: 15px; /* Slightly reduce padding */
+    }
+
+    .login__container h2 {
+        font-size: 22px; /* Slightly smaller title */
+    }
+
+    .login__container input {
+        font-size: 14px; /* Smaller input font size */
+    }
+
+    .login__container button {
+        font-size: 14px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-page {
+        padding: 10px; /* Less padding on smaller devices */
+    }
+
+    .login__container {
+        max-width: 95%; /* Further adjust for small screens */
+        padding: 10px; /* Less padding inside the card */
+    }
+
+    .login__container h2 {
+        font-size: 20px; /* Smaller title for small devices */
+    }
+
+    .login__container input {
+        font-size: 13px; /* Even smaller input font size */
+    }
+
+    .login__container button {
+        font-size: 13px; /* Even smaller button font size */
+    }
+}

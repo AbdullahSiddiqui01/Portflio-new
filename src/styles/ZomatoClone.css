@@ -1,0 +1,61 @@
+/* ZomatoClone.css */
+.zomato-clone {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+  }
+  
+  .zomato-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .zomato-header h1 {
+    margin: 0;
+  }
+  
+  .zomato-header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .zomato-header nav ul li {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .zomato-main {
+    margin-top: 20px;
+  }
+  
+  .restaurant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .restaurant {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .restaurant img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .zomato-footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  

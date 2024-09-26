@@ -1,0 +1,109 @@
+.register__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height for better centering */
+    padding: 20px;
+    background-color: #f0f2f5; /* Light background color */
+    flex-direction: column; /* Stack items vertically */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.register__card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full width for responsiveness */
+    max-width: 400px; /* Limit maximum width */
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.register__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register__input-group {
+    margin-bottom: 15px;
+}
+
+.register__input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.register__input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.register__button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register__button:hover {
+    background-color: #0056b3;
+}
+
+.register__footer {
+    margin-top: 15px;
+}
+
+.register__footer p {
+    font-size: 14px;
+    color: #777;
+}
+
+.register__footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register__footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Enhanced Responsiveness */
+@media (max-width: 768px) {
+    .register__title {
+        font-size: 20px; /* Slightly smaller title on smaller screens */
+    }
+
+    .register__input-field {
+        font-size: 14px; /* Smaller input text */
+    }
+
+    .register__button {
+        font-size: 14px; /* Smaller button text */
+    }
+
+    .register__card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .register__container {
+        padding: 10px; /* Less padding on smaller devices */
+    }
+
+    .register__card {
+        padding: 10px; /* Less padding inside the card */
+    }
+}

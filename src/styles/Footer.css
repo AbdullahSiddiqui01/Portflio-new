@@ -1,0 +1,47 @@
+/* Footer.css */
+.footer {
+    background: linear-gradient(135deg, #6e7cfe, #4a54f1); /* Gradient color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    max-width: 70vw; /* Center the content */
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-links {
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #f2e79d; /* Change color on hover */
+  }
+  
+  .social-media {
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: #f2e79d; /* Change color on hover */
+  }
+  

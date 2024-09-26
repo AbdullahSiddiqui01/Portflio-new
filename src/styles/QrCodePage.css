@@ -1,0 +1,22 @@
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    background-color: #f0f0f0; /* Light background for contrast */
+  }
+  
+  .qr-code-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .qr-code-container canvas {
+    padding: 10px;
+    border: 2px solid #333; /* Optional border around QR code */
+    background-color: white;
+  }
+  

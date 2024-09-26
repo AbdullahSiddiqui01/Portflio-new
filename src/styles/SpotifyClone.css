@@ -1,0 +1,64 @@
+/* SpotifyClone.css */
+.spotify-clone {
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+  }
+  
+  .spotify-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #282828;
+    padding-bottom: 10px;
+  }
+  
+  .spotify-header h1 {
+    font-size: 2rem;
+  }
+  
+  .spotify-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .spotify-header nav ul li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .spotify-header nav ul li:hover {
+    color: #1db954; /* Spotify green */
+  }
+  
+  .spotify-main {
+    margin-top: 40px;
+  }
+  
+  .featured-playlists,
+  .now-playing {
+    margin-bottom: 40px;
+  }
+  
+  .playlist,
+  .track {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .playlist img,
+  .track img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  

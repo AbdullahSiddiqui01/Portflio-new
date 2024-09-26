@@ -1,0 +1,61 @@
+.youtube-clone {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .youtube-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .youtube-header h1 {
+    margin-bottom: 10px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .youtube-main {
+    margin-top: 20px;
+  }
+  
+  .video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .video-title {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .video-description {
+    font-size: 14px;
+    color: #666;
+  }
+  
