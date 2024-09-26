@@ -11,6 +11,7 @@ const CarGame = () => {
   const [gameInterval, setGameInterval] = useState(null);
   const [obstacleInterval, setObstacleInterval] = useState(null);
 
+  // Key event listener for car movement
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'ArrowLeft' && carPosition > 0) {
@@ -27,6 +28,7 @@ const CarGame = () => {
     };
   }, [carPosition]);
 
+  // Generate new obstacles
   const generateObstacle = () => {
     const newObstacle = {
       id: Math.random(),
@@ -36,6 +38,7 @@ const CarGame = () => {
     setObstacles((prev) => [...prev, newObstacle]);
   };
 
+  // Move obstacles and check for collisions
   const moveObstacles = () => {
     setObstacles((prev) => {
       return prev.map(obstacle => {
@@ -44,6 +47,7 @@ const CarGame = () => {
     });
   };
 
+  // Check for collision with the car
   const checkCollision = () => {
     obstacles.forEach(obstacle => {
       if (obstacle.top >= 550 && Math.abs(obstacle.position - carPosition) < 10) {
@@ -54,6 +58,7 @@ const CarGame = () => {
     });
   };
 
+  // Start the game
   const startGame = () => {
     setIsGameOver(false);
     setScore(0);
@@ -74,6 +79,7 @@ const CarGame = () => {
     setObstacleInterval(newObstacleInterval);
   };
 
+  // Clear intervals if the game is over
   useEffect(() => {
     if (isGameOver) {
       clearInterval(gameInterval);
@@ -102,7 +108,6 @@ const CarGame = () => {
                 style={{ left: `${obstacle.position}%`, top: `${obstacle.top}px`, backgroundColor: 'red' }} // Changed color to red for visibility
               ></div>
             ))}
-            {/* Add more road elements here */}
             <div className="road-sign" style={{ left: '20%', top: '200px' }}>🚧</div>
             <div className="road-sign" style={{ left: '70%', top: '400px' }}>🚦</div>
           </div>

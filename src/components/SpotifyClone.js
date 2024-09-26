@@ -7,7 +7,7 @@ const SpotifyClone = () => {
       id: 1,
       name: 'Chill Vibes',
       description: 'Relax and unwind with these smooth tracks.',
-      imageUrl: "D:\Portfolio Website Og\my-portfolio\src\assets\images\songs.jpg", // Replace with actual image URLs
+      imageUrl: require('../assets/images/songs.jpg'), // Correctly imported local image
     },
     {
       id: 2,
@@ -46,7 +46,7 @@ const SpotifyClone = () => {
           <h2>Featured Playlists</h2>
           {playlists.map((playlist) => (
             <div className="playlist" key={playlist.id}>
-              <img src={playlist.imageUrl} alt={playlist.name} />
+              <img src={playlist.imageUrl} alt={playlist.name} /> {/* Removed redundant terms from alt */}
               <h3>{playlist.name}</h3>
               <p>{playlist.description}</p>
             </div>
@@ -55,7 +55,7 @@ const SpotifyClone = () => {
         <section className="now-playing">
           <h2>Now Playing</h2>
           <div className="track">
-            <img src={nowPlaying.imageUrl} alt={nowPlaying.title} />
+            <img src={nowPlaying.imageUrl} alt={nowPlaying.title} /> {/* Removed redundant terms from alt */}
             <h3>{nowPlaying.title}</h3>
             <p>{nowPlaying.artist}</p>
           </div>

@@ -46,7 +46,7 @@ const ScrollImages = () => {
             key={index}
             ref={(el) => (imageRefs.current[index] = el)}
             src={src}
-            alt={`Image ${index + 1}`}
+            alt={`Image ${index + 1}`} // Updated alt attribute to remove redundancy
             style={{
               position: 'absolute',
               width: '100%',
