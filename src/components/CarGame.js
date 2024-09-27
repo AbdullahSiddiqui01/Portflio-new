@@ -41,9 +41,10 @@ const CarGame = () => {
   // Move obstacles and check for collisions
   const moveObstacles = () => {
     setObstacles((prev) => {
-      return prev.map(obstacle => {
-        return { ...obstacle, top: obstacle.top + speed }; // Move obstacle down
-      }).filter(obstacle => obstacle.top < 600); // Keep within the view
+      return prev.map(obstacle => ({
+        ...obstacle, 
+        top: obstacle.top + speed // Move obstacle down
+      })).filter(obstacle => obstacle.top < 600); // Keep within the view
     });
   };
 
@@ -85,7 +86,7 @@ const CarGame = () => {
       clearInterval(gameInterval);
       clearInterval(obstacleInterval);
     }
-  }, [isGameOver]);
+  }, [isGameOver, gameInterval, obstacleInterval]);
 
   return (
     <div className="game-container">

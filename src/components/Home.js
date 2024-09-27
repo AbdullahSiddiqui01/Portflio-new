@@ -11,12 +11,7 @@ import PieChart from './PieChart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import testimonialImage1 from '../assets/images/james.jpg';
-import testimonialImage2 from '../assets/images/mrjohn.webp';
-import testimonialImage3 from '../assets/images/sam.webp';
-import webdevWorkshopImage from '../assets/images/web-dev.jpg'; 
-import mlConferenceImage from '../assets/images/ml.jpg'; 
-import networkingMeetupImage from '../assets/images/networkingmeet.jpg';
+
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
