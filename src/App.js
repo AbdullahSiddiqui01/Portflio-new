@@ -19,6 +19,9 @@ import VoiceIntegration from './components/VoiceIntegration';
 import YouTubeClone from './components/Youtube';
 import WebScrapingTool from './components/WebScrapingTool';
 import TextRecognitionSystem from './components/TextRecognitionSystem';
+import ProjectAttendanceApp from './components/Attendance';
+import Calculator from './components/Calculator';
+import ProjectFaceRecognition from './components/FaceRecognitionSystem';
 const App = () => {
   return (
     <Router>
@@ -38,10 +41,14 @@ const App = () => {
         <Route path="projects/14" element={<JarvisProject/>} />
         <Route path="projects/7" element={<YouTubeClone/>} />
         <Route path="projects/10" element={<WebScrapingTool/>} />
+        <Route path="projects/5" element={<Calculator/>} />
+        <Route path="projects/6" element={<ProjectFaceRecognition/>} />
         <Route path="projects/13" element={<TextRecognitionSystem/>} />
+        <Route path="projects/8" element={<ProjectAttendanceApp/>} />
+
         <Route path="projects/9" element={<SpotifyClone />}
 
-        />{/* Update to lowercase for consistency */}
+        />
       </Routes>
       <Footer />
     </Router>

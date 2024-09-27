@@ -8,9 +8,6 @@ import electronicVentureImage from '../assets/images/mboile.jpeg';
 import Projects from './Projects'; 
 import Modal from './Modal';
 import PieChart from './PieChart'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faLinkedin, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import testimonialImage1 from '../assets/images/james.jpg';
 
 const Home = () => {
@@ -31,7 +28,20 @@ const Home = () => {
             className="profile-image animated-image" 
             onClick={() => setIsModalOpen(true)} 
           />
-          <h1>Welcome to Abdullah Siddiqui's Portfolio</h1>
+            <h1>Welcome to Abdullah Siddiqui's Portfolio</h1>
+        <div className="portfolio">
+      <h1>Abdullah Siddiqui</h1>
+      <h2>B.Tech Graduate</h2>
+      <h3>Career Destinations:</h3>
+      <ul>
+        <li>Software Developer</li>
+        <li>Data Scientist</li>
+        <li>Cybersecurity Expert</li>
+      </ul>
+      <h3>Contact Information:</h3>
+      <p>Phone: <a href="tel:8355899434">8355899434</a></p>
+      <p>Email : <a href="mailto:asidd03@gmail.com">asidd03@gmail.com</a></p>
+    </div>
           <p className="hero-description animated-description">
             Hi! I'm Abdullah Siddiqui, a passionate problem solver with extensive knowledge across various fields. 
             I specialize in web development, seamlessly integrating Python and machine learning to tackle real-world challenges. 
@@ -42,29 +52,6 @@ const Home = () => {
           </p>
           <a href="#projects" className="cta-button animated-button">View My Projects</a>
         </div>
-
-        <section className="social-media-section">
-          <div className="social-media">
-            <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faFacebook} size="lg" />
-            </a>
-            <a href="https://www.twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faTwitter} size="lg" />
-            </a>
-            <a href="https://www.linkedin.com/in/abdullah-shamshuddin-siddiqui-4469701b4" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faLinkedin} size="lg" />
-            </a>
-            <a href="https://www.instagram.com/Abdullahsidd01" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
-            </a>
-            <a href="https://github.com/Abdullah321222" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faGithub} size="lg" />
-            </a>
-            <a href="https://wa.me/your-whatsapp-number" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faWhatsapp} size="lg" />
-            </a>
-          </div>
-        </section>
       </header>
 
       <section id="projects" className="projects-section">
