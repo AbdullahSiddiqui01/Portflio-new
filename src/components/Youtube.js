@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/YouTubeClone.css'; // Import CSS for styling
 
 const YouTubeClone = () => {
-  // Sample video data with YouTube links
+
   const videos = [
     {
       id: 1,

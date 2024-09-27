@@ -10,8 +10,6 @@ import './styles/App.css';
 import Login from './components/Login';
 import Register from './components/Register';
 import Project1 from './components/Project1'; // Import the Project1 component
-import ThreeDAnimation from './components/ThreeDProject';
-import ScrollImages from './components/ScrollImages'; 
 import QrCodePage from './components/QrCodePage';
 import SpotifyClone from './components/SpotifyClone';
 import EcommercePage from './components/EcommercePage';
@@ -30,9 +28,7 @@ const App = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/1" element={<Project1 />} /> {/* Add route for Project1 */}
         <Route path="/about" element={<About />} />
-        <Route path="/projects/3d" element={<ThreeDAnimation />} />
         <Route path="/game" element={<CarGame />} /> 
-        <Route path="/projects/3d" element={<ScrollImages/>} /> 
         <Route path="/login" element={<Login />} /> {/* Update to lowercase for consistency */}
         <Route path="/register" element={<Register />} /> 
         <Route path="projects/2" element={< EcommercePage/>} />
