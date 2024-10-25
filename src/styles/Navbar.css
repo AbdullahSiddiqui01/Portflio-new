@@ -1,9 +1,10 @@
+/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background-color: #2C3E50; /* Deep slate background for a professional look */
+  background: linear-gradient(to bottom right, rgba(143, 131, 189, 0.7), rgba(40, 109, 179, 0.7)); /* Transparent gradient background */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
   position: sticky;
   top: 0;
@@ -14,7 +15,7 @@
   transition: background 0.3s ease; /* Smooth transition for color changes */
 }
 
-
+/* Other styles remain unchanged */
 .navbar-logo {
   display: flex;
   align-items: center;
@@ -66,27 +67,53 @@
 .navbar-links a:hover {
   color: #FFFFFF; /* Pure white text on hover */
   background-color: #1ABC9C; /* Elegant teal hover background */
-  border-radius: 16px;
+}
+
+/* Mobile Toggle Button */
+.navbar-toggle {
+  display: none; /* Initially hidden */
+  background: transparent; /* Transparent background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hamburger Icon */
+.navbar-toggle-icon {
+  width: 30px; /* Width of the icon */
+  height: 3px; /* Height of the icon */
+  background-color: #ECF0F1; /* Icon color */
+  margin: 6px 0; /* Spacing between lines */
+  transition: background 0.3s ease; /* Transition for color changes */
+}
+
+/* Mobile Navbar Links Hidden Initially */
+.navbar-links {
+  display: flex; /* Display links in a row */
+}
+
+/* Show the Navbar Links when toggled */
+.navbar-links.active {
+  display: flex; /* Show links in a column */
+  flex-direction: column; /* Stack links vertically */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 12px 20px;
+  .navbar-toggle {
+    display: block; /* Show toggle button on mobile */
   }
 
   .navbar-links {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    align-items: center;
-    padding: 15px 0;
-    background-color: #2C3E50; /* Consistent background in mobile */
+    display: none; /* Hidden by default on mobile */
+    gap: 15px; /* Space between links */
+    width: 100%; /* Full width */
+    align-items: center; /* Center align links */
+    padding: 15px 0; /* Padding for the mobile menu */
+    background: linear-gradient(to bottom right, rgba(12, 3, 45, 0.7), rgba(40, 109, 179, 0.7)); /* Consistent background */
   }
 
-  .navbar-links a {
-    width: 100%; /* Full-width links for mobile */
-    text-align: center;
+  .navbar-links.active {
+    display: flex; /* Show links when toggled */
   }
 }
 

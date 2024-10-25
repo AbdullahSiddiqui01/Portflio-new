@@ -5,12 +5,12 @@ import aliImage from '../assets/images/muhamad-ali.webp';
 import ronaldoImage from '../assets/images/cr7.jpg';
 import plasticIndustryImage from '../assets/images/granuels.jpg';
 import electronicVentureImage from '../assets/images/mboile.jpeg';
+import animatedCartoon from "../assets/images/male0001.png";
 import Projects from './Projects';
 import Modal from './Modal';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import PieChart from './PieChart';
-import testimonialImage1 from '../assets/images/james.jpg';
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -30,6 +30,7 @@ const Home = () => {
             className="profile-image animated-image"
             onClick={() => setIsModalOpen(true)}
           />
+          <h1 className="hero-title animated-title">Welcome to Abdullah's Portfolio!</h1>
           <p className="hero-description animated-description">
             Hi! I'm Abdullah Siddiqui, a passionate problem solver with extensive knowledge across various fields. 
             I specialize in web development, seamlessly integrating Python and machine learning to tackle real-world challenges. 
@@ -39,8 +40,10 @@ const Home = () => {
           </p>
           <a href="#projects" className="cta-button animated-button">View My Projects</a>
         </div>
+        <div className="cartoon-container">
+          <img src={animatedCartoon} alt="Animated Cartoon" className="animated-cartoon" />
+        </div>
       </header>
-
 
       <section id="projects" className="projects-section fade-in">
         <Projects />
@@ -69,6 +72,7 @@ const Home = () => {
         <blockquote className="quote">
           "Idolism is the worship of false gods; I seek role models whose dedication inspires."
         </blockquote>
+
         <Carousel
           infiniteLoop={true}
           showThumbs={false}
@@ -77,8 +81,6 @@ const Home = () => {
           interval={5000}
           className="role-model-carousel fade-in"
         >
-         
-
           <div className="role-model">
             <div className="role-model-image-container">
               <img src={aliImage} alt="Muhammad Ali" className="role-model-image" />
@@ -101,10 +103,7 @@ const Home = () => {
                 Similarly, Cristiano Ronaldo, one of the most celebrated footballers in history, embodies dedication and hard work.
               </p>
             </div>
-            
           </div>
-         
-
         </Carousel>
       </section>
       

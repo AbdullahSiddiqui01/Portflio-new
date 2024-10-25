@@ -1,5 +1,5 @@
 // Navbar.js
-import React from 'react';
+import React, { useState } from 'react'; // Import useState
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faProjectDiagram, faUser, faGamepad, faSignInAlt } from '@fortawesome/free-solid-svg-icons'; // Import the login icon
@@ -7,31 +7,42 @@ import logo from '../assets/images/port.png';
 import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to manage the toggle
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen); // Toggle the state
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Logo" className="logo" />
         <h1>Abdullah's Portfolio</h1>
       </div>
-      <ul className="navbar-links">
+      <button className="navbar-toggle" onClick={toggleNavbar} aria-label="Toggle navigation">
+        <span className="navbar-toggle-icon"></span>
+        <span className="navbar-toggle-icon"></span>
+        <span className="navbar-toggle-icon"></span>
+      </button>
+      <ul className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <li>
           <Link to="/">
-           Home
+            Home
           </Link>
         </li>
         <li>
           <Link to="/projects">
-           Projects
+            Projects
           </Link>
         </li>
         <li>
           <Link to="/about">
-           About
+            About
           </Link>
         </li>
         <li>
           <Link to="/game">
-          Game
+            Game
           </Link>
         </li>
         <li>

@@ -16,7 +16,6 @@
   margin: 10px; /* Margin between cards */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
-  max-width: 100%; /* Set a max width for each card */
   background-color: #fff; /* Ensure card background is white */
   display: flex;
   flex-direction: column; /* Stack children vertically */
@@ -28,11 +27,8 @@
 }
 
 .project-images {
-  width: 100%; /* Ensure images take full width */
-  height: 150px; /* Set a fixed height for all project images */
   object-fit: cover; /* Maintain aspect ratio and cover the area */
-  border-radius: 8px;
-  margin-bottom: 12px; /* Space between image and title */
+  border-radius: 8px;/* Space between image and title */
 }
 
 .project-title {

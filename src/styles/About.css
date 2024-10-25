@@ -1,24 +1,26 @@
 .about-section-wrapper {
   display: flex;
   justify-content: center; /* Center the about container */
-  padding: 40px;
+  padding: 40px; /* Padding around the section */
   background-color: #f8f9fa; /* Light background for contrast */
-  max-width: 1200px;
+  max-width: 1200px; /* Maximum width of the section */
   margin: 0 auto; /* Center the wrapper on the page */
+  border-radius: 10px; /* Add rounded corners to the wrapper */
 }
 
 .about-section-container {
   max-width: 800px; /* Limit the width of the container */
   text-align: center; /* Center-align text */
-  background-color: #fff; /* White background for the about section */
+  background-color: #ffffff; /* White background for the about section */
   padding: 30px; /* Padding around the container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-  transition: transform 0.2s; /* Smooth hover effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
 }
 
 .about-section-container:hover {
-  transform: scale(1.02); /* Slight scale effect on hover */
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
 .avatar-image {
@@ -27,13 +29,14 @@
   border-radius: 50%; /* Make the image circular */
   margin-bottom: 20px; /* Space below the avatar */
   object-fit: cover; /* Ensure proper image fitting */
+  border: 3px solid #007bff; /* Add a border around the avatar */
 }
 
 .about-description-text {
   margin: 20px 0; /* Vertical margin for spacing */
-  line-height: 1.8; /* Improve readability */
+  line-height: 1.6; /* Improve readability */
   font-size: 1rem; /* Set font size */
-  color: #333; /* Dark color for text */
+  color: #555; /* Dark gray for text */
 }
 
 .hobbies-section {
@@ -49,10 +52,10 @@
 
 .hobby-card {
   background: #4a54f1; /* Background color for cards */
-  color: #fff; /* Text color */
+  color: #ffffff; /* Text color */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
   cursor: pointer; /* Cursor changes to pointer */
   width: 200px; /* Fixed width for cards */
   display: flex; /* Use flexbox for aligning items */
@@ -67,13 +70,15 @@
   height: 100px; /* Fixed height for images */
   object-fit: cover; /* Cover the area without stretching */
   border-radius: 10px; /* Rounded corners */
+  margin-bottom: 10px; /* Space below the image */
 }
 
 .hobby-card-title {
   margin: 10px 0; /* Space around text */
   text-align: center; /* Center the text */
   flex: 1; /* Allow text to take remaining space */
-  font-size: 1.1rem; /* Font size for headings */
+  font-size: 1.2rem; /* Font size for headings */
+  font-weight: bold; /* Bold title for emphasis */
 }
 
 .hobby-card:hover {

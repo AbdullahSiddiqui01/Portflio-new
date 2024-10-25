@@ -5,9 +5,10 @@
 }
 
 
+
 .hero {
-  top: 2rem;
-  background: linear-gradient(to bottom right, #4a54f1, #6e7cfe);
+  height: 100vh; 
+  background: linear-gradient(to bottom right, rgba(12, 3, 45, 0.85), rgba(40, 109, 179, 0.85));
   color: white;
   padding: 100px 20px;
   text-align: center;
@@ -15,16 +16,33 @@
   overflow: hidden;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-  z-index: 1;
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  30% { transform: translateY(-20px); }
+  60% { transform: translateY(0); }
+  100% { transform: translateY(0); }
 }
+
+.cartoon {
+  position: absolute;
+  bottom: 20%; /* Adjust to fit your design */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: jump 1s ease-in-out infinite; /* Infinite jumping */
+}
+
+/* Fade-in Animation for Other Sections */
+.section {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1; 
+}
+
+
 
 .hero-content {
   max-width: 80vw;
@@ -36,7 +54,7 @@
 
 
 .profile-image {
-  width: 150px;
+  width: 140px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -56,7 +74,7 @@
 
 
 .animated-button:hover {
-  background-color: #f4d03f;
+  background-color: #3f9df4;
   transform: translateY(-3px);
 }
 
@@ -83,7 +101,7 @@
 }
 
 .industry-item {
-  max-width: 98%;
+  max-width: 50%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
@@ -96,7 +114,7 @@
 }
 
 .industry-image {
-  max-width: 98%;
+  max-width: 50%;
   border-radius: 10px 10px 0 0;
   transition: transform 0.3s ease;
 }
@@ -203,7 +221,7 @@
 
 .projects {
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background: linear-gradient(to bottom right, #d2cfda, #186478);
   text-align: center;
 }
 
@@ -225,7 +243,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ensure images don't overflow */
+  overflow: hidden; 
   transition: transform 0.2s;
   width: 300px; /* Fixed width for uniformity */
   max-width: 90%; /* Responsive */
@@ -289,7 +307,7 @@
   }
 }
 
-/* Button styles */
+
 .cta-button {
   display: inline-block; /* Ensure the button is inline with surrounding elements */
   padding: 15px 30px; /* Padding for top/bottom and left/right */
@@ -332,4 +350,32 @@
 .animated-button:hover:after {
   width: 100%; /* Expand width to 100% */
   left: 0; /* Move to the left */
+}
+.cartoon-container {
+  position: absolute; /* Position the cartoon relative to the hero section */
+  bottom: 50px; /* Adjust the position as needed */
+  left: 50%; /* Center the cartoon */
+  transform: translateX(-50%); /* Center align */
+  width: 550px; /* Set a width for the cartoon */
+}
+
+.animated-cartoon {
+  width: 100%; /* Make the cartoon responsive */
+  animation: bounce 2s infinite; /* Optional: Add a bounce effect */
+}
+
+/* Optional bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Other styles for hero content */
+.hero-content {
+  text-align: center;
+  margin-bottom: 2rem; /* Add space for the cartoon */
 }
