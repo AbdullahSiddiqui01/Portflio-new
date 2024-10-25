@@ -2,7 +2,7 @@
 import React, { useState } from 'react'; // Import useState
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faProjectDiagram, faUser, faGamepad, faSignInAlt } from '@fortawesome/free-solid-svg-icons'; // Import the login icon
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'; // Import the login icon
 import logo from '../assets/images/port.png';
 import "../styles/Navbar.css";
 

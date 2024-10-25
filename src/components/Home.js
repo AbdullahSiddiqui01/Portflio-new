@@ -15,11 +15,6 @@ import PieChart from './PieChart';
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted!');
-  };
-
   return (
     <div className="home">
       <header className="hero">
@@ -107,7 +102,6 @@ const Home = () => {
         </Carousel>
       </section>
       
-
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
