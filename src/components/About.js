@@ -45,38 +45,37 @@ const hobbies = Object.keys(hobbyImages); // Get hobby names
 
 const About = () => {
   return (
-    <div className="about-wrapper">
-      <div className="about-container">
-        <img src={avatarImage} alt="Avatar" className="avatar" />
+    <div className="about-section-wrapper">
+      <div className="about-section-container">
+        <img src={avatarImage} alt="Avatar" className="avatar-image" />
         <h2>About Me</h2>
-        <p className="about-text">
+        <p className="about-description-text">
           I am a dedicated and passionate web designer and data analyst, continuously seeking to 
           enhance my skills and knowledge in both fields. My journey in web designing began with 
           a fascination for creating visually stunning and user-friendly websites that provide 
           an exceptional user experience. With a keen eye for detail and a strong foundation in 
           design principles, I strive to bring creative concepts to life.
         </p>
-        <p className="about-text">
+        <p className="about-description-text">
           In addition to my design skills, I have a strong inclination towards data analytics. 
           I love diving into data to uncover insights that can drive decision-making and 
           improve business outcomes. My analytical mindset enables me to approach problems 
           methodically and develop effective solutions.
         </p>
-        <p className="about-text">
+        <p className="about-description-text">
           I believe that the combination of web design and data analysis empowers me to 
           create impactful digital experiences while leveraging data to inform design choices. 
           I am always eager to learn and grow, taking on challenges that enhance my problem-solving 
           abilities. Let's connect and explore how we can create meaningful solutions together!
         </p>
-      
 
         <div className="hobbies-section">
           <h3>Hobbies</h3>
-          <div className="hobbies-container">
+          <div className="hobbies-card-container">
             {hobbies.map((hobby, index) => (
               <div key={index} className="hobby-card">
                 <img src={hobbyImages[hobby]} alt={hobby} className="hobby-image" />
-                <h4>{hobby}</h4>
+                <h4 className="hobby-card-title">{hobby}</h4>
                 <p className="hobby-description">{hobbyDescriptions[hobby]}</p>
               </div>
             ))}

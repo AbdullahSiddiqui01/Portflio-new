@@ -1,58 +1,65 @@
 .projects {
-    padding: 20px;
-    text-align: center; /* Center text for the entire project section */
-  }
-  
-  .project-cards {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap in smaller screens */
-    justify-content: center; /* Center the cards */
-  }
-  
-  .project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 10px; /* Margin between cards */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    max-width: 300px; /* Set a max width for each card */
-  }
-  
-  .project-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .project-images {
-    width: 100%; /* Ensure images take full width */
-    height: 150px; /* Set a fixed height for all project images */
-    object-fit: cover; /* Maintain aspect ratio and cover the area */
-    border-radius: 8px;
-  }
-  
-  .project-title {
-    font-size: 1.5em;
-    margin: 12px 0;
-  }
-  
-  .project-description {
-    font-size: 1em;
-    color: #666;
-    text-align: center;
-  }
-  
-  .project-button {
-    margin-top: 12px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .project-button:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 20px;
+  text-align: center; /* Center text for the entire project section */
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap in smaller screens */
+  justify-content: center; /* Center the cards */
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 10px; /* Margin between cards */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 100%; /* Set a max width for each card */
+  background-color: #fff; /* Ensure card background is white */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+.project-images {
+  width: 100%; /* Ensure images take full width */
+  height: 150px; /* Set a fixed height for all project images */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 8px;
+  margin-bottom: 12px; /* Space between image and title */
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin: 12px 0;
+  font-weight: bold; /* Make the title bold for emphasis */
+  text-align: center; /* Center text */
+}
+
+.project-description {
+  font-size: 1em;
+  color: #666;
+  text-align: center;
+}
+
+.project-button {
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Primary color for button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.project-button:hover {
+  background-color: #0056b3; 
+}

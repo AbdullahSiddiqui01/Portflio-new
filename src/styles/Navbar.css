@@ -1,89 +1,107 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Space between logo and links */
-  align-items: center; /* Center items vertically */
-  padding: 8px 15px; /* Reduced padding for thinner navbar */
-  background: linear-gradient(135deg, #8686dd, #aab0de); /* Lighter gradient */
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-  position: sticky; /* Make navbar sticky */
-  top: 0; /* Stick to the top */
-  z-index: 1000; /* Ensure it stays above other content */
-  font-family: 'Poppins', sans-serif; /* Modern font */
-  border-bottom: 1px solid #eaeaea; /* Thin bottom border */
-  width: 100%; /* Make navbar utilize the full width */
-  margin: 0; /* Remove any default margins */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #2C3E50; /* Deep slate background for a professional look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background 0.3s ease; /* Smooth transition for color changes */
 }
 
-/* Logo and Title */
+
 .navbar-logo {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 40px; /* Smaller logo */
-  height: 40px;
-  border-radius: 50%; /* Circular logo */
-  margin-right: 12px; /* Space between logo and title */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .navbar h1 {
-  font-size: 1.4rem; /* Adjusted title font size */
-  color: #444; /* Darker title color */
-  font-weight: 600;
+  font-size: 1.5rem;
+  color: #FFFFFF; /* Crisp white title */
+  font-weight: 700;
+  margin: 0;
 }
 
-/* Navbar links */
+/* Navbar Links */
 .navbar-links {
   list-style: none;
   display: flex;
-  margin-left: auto; /* Push links to the right */
-  justify-content: flex-end; /* Align links to the end */
-  gap: 20px; /* Space between links */
-  padding-right: 30px; /* Ensure space between links and the edge */
+  gap: 28px;
+  margin-left: auto;
 }
 
 .navbar-links li {
-  margin: 0; /* Remove extra margin */
+  margin: 0;
 }
 
-/* Home link with pink background */
 .navbar-links a {
-  color: #171718; /* Darker text color */
+  color: #ECF0F1; /* Soft white for links */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  padding: 8px 16px; /* Padding around links */
-  border-radius: 12px; /* Soft rounded corners */
-  transition: all 0.3s ease;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: color 0.3s, background 0.3s; /* Smooth hover transition */
 }
 
 .navbar-links a.home-link {
-  background-color: pink; /* Pink background for Home link */
-  color: white; /* White text on Home link */
-  font-weight: bold;
+  background-color: #3498DB; /* Highlight Home link with vibrant blue */
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 12px;
 }
 
 .navbar-links a:hover {
-  color: #ffffff; /* White text on hover */
-  background-color: #8287b9; /* Background color on hover */
-  border-radius: 20px;
+  color: #FFFFFF; /* Pure white text on hover */
+  background-color: #1ABC9C; /* Elegant teal hover background */
+  border-radius: 16px;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px 15px; /* Adjust padding for smaller screens */
+    padding: 12px 20px;
   }
 
   .navbar-links {
-    flex-direction: column; 
-    align-items: center; /* Center links */
-    gap: 10px; /* Space between links */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #2C3E50; /* Consistent background in mobile */
   }
 
-  .navbar-links li {
-    margin-top: 10px;
+  .navbar-links a {
+    width: 100%; /* Full-width links for mobile */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1.4rem;
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem;
+    padding: 6px 14px;
+  }
+
+  .logo {
+    width: 38px;
+    height: 38px;
   }
 }

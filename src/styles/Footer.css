@@ -1,47 +1,69 @@
 /* Footer.css */
 .footer {
-    background: linear-gradient(135deg, #6e7cfe, #4a54f1); /* Gradient color */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-content {
-    max-width: 70vw; /* Center the content */
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .footer-links {
-    margin: 10px 0;
+  background: linear-gradient(135deg, #6e7cfe, #4a54f1); /* Gradient color */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.footer-content {
+  max-width: 70vw; /* Center the content */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-links {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+  justify-content: center; /* Center links */
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+  font-weight: 500; /* Slightly bolder for emphasis */
+}
+
+.footer-links a:hover {
+  color: #f2e79d; /* Change color on hover */
+}
+
+.social-media {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Center social media links */
+}
+
+.social-media a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+  font-size: 1.2rem; /* Slightly larger for better visibility */
+}
+
+.social-media a:hover {
+  color: #f2e79d; /* Change color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer {
+      padding: 15px 0; /* Reduce padding on smaller screens */
   }
   
   .footer-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: #f2e79d; /* Change color on hover */
-  }
-  
-  .social-media {
-    margin-top: 10px;
+      margin: 0 10px; /* Reduce margin for mobile */
   }
   
   .social-media a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
+      margin: 0 5px; /* Reduce margin for mobile */
   }
-  
-  .social-media a:hover {
-    color: #f2e79d; /* Change color on hover */
-  }
-  
+}

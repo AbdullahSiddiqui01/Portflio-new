@@ -11,27 +11,27 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-logo">
         <img src={logo} alt="Logo" className="logo" />
-        <h1>My Portfolio</h1>
+        <h1>Abdullah's Portfolio</h1>
       </div>
       <ul className="navbar-links">
         <li>
           <Link to="/">
-            <FontAwesomeIcon icon={faHome} /> Home
+           Home
           </Link>
         </li>
         <li>
           <Link to="/projects">
-            <FontAwesomeIcon icon={faProjectDiagram} /> Projects
+           Projects
           </Link>
         </li>
         <li>
           <Link to="/about">
-            <FontAwesomeIcon icon={faUser} /> About
+           About
           </Link>
         </li>
         <li>
           <Link to="/game">
-            <FontAwesomeIcon icon={faGamepad} /> Game
+          Game
           </Link>
         </li>
         <li>

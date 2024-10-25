@@ -1,36 +1,105 @@
+/* Modal Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000; /* Ensure it's above other content */
+  display: flex; /* Use flex to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Fixed position to cover the whole screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with higher opacity */
+  z-index: 1000; /* Sit on top of other content */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  padding: 30px; /* Inner padding */
+  width: 90%; /* Full width on small screens */
+  max-width: 500px; /* Limit maximum width */
+  animation: fadeIn 0.3s; /* Fade-in animation */
+}
+
+/* Form Styles */
+.modal-content form {
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+}
+
+/* Label Styles */
+.modal-content label {
+  margin-bottom: 8px; /* Space below labels */
+  font-weight: 600; /* Slightly bolder labels */
+  color: #333; /* Darker text for readability */
+}
+
+/* Input and Textarea Styles */
+.modal-content input,
+.modal-content textarea {
+  padding: 12px; /* Increased inner padding */
+  margin-bottom: 20px; /* More space between inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+  width: 100%; /* Full width for inputs */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Focused Input and Textarea Styles */
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.modal-content button[type="submit"] {
+  background-color: #007bff; /* Blue background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 12px; /* Increased inner padding */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  margin-top: 10px; /* Space above submit button */
+}
+
+/* Submit Button Hover Effect */
+.modal-content button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Close Button */
+.modal-content button.close {
+  background-color: #dc3545; /* Red background */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 12px; /* Inner padding */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
+  margin-top: 10px; /* Space above close button */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Close Button Hover Effect */
+.modal-content button.close:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .modal-content {
-    position: relative;
-    max-width: 50%; /* Responsive width */
-    max-height: 50%; /* Responsive height */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .modal-image {
-    width: 70%;
-    height: 70%; /* Responsive image */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
+}

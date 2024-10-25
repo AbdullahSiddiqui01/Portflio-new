@@ -1,130 +1,113 @@
 import React, { useState } from 'react';
 import "../styles/Home.css";
-import profileImage from '../assets/images/abdog.jpg'; 
-import aliImage from '../assets/images/muhamad-ali.webp'; 
-import ronaldoImage from '../assets/images/cr7.jpg'; 
+import profileImage from '../assets/images/abdog.jpg';
+import aliImage from '../assets/images/muhamad-ali.webp';
+import ronaldoImage from '../assets/images/cr7.jpg';
 import plasticIndustryImage from '../assets/images/granuels.jpg';
 import electronicVentureImage from '../assets/images/mboile.jpeg';
-import Projects from './Projects'; 
+import Projects from './Projects';
 import Modal from './Modal';
-import PieChart from './PieChart'; 
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import PieChart from './PieChart';
 import testimonialImage1 from '../assets/images/james.jpg';
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Form submitted!'); 
+    alert('Form submitted!');
   };
 
   return (
     <div className="home">
       <header className="hero">
         <div className="hero-content">
-          <img 
-            src={profileImage} 
-            alt="Profile" 
-            className="profile-image animated-image" 
-            onClick={() => setIsModalOpen(true)} 
+          <img
+            src={profileImage}
+            alt="Profile"
+            className="profile-image animated-image"
+            onClick={() => setIsModalOpen(true)}
           />
-            <h1>Welcome to Abdullah Siddiqui's Portfolio</h1>
-        <div className="portfolio">
-      <h1>Abdullah Siddiqui</h1>
-      <h2>B.Tech Graduate</h2>
-      <h3>Career Destinations:</h3>
-      <ul>
-        <li>Software Developer</li>
-        <li>Data Scientist</li>
-        <li>Cybersecurity Expert</li>
-      </ul>
-      <h3>Contact Information:</h3>
-      <p>Phone: <a href="tel:8355899434">8355899434</a></p>
-      <p>Email : <a href="mailto:asidd03@gmail.com">asidd03@gmail.com</a></p>
-    </div>
           <p className="hero-description animated-description">
             Hi! I'm Abdullah Siddiqui, a passionate problem solver with extensive knowledge across various fields. 
             I specialize in web development, seamlessly integrating Python and machine learning to tackle real-world challenges. 
             My deep understanding of data structures allows me to optimize solutions effectively, ensuring code reusability and efficiency, which contributes to cost-saving measures. 
             I have a proven ability to expand a company’s reach with the guidance of key individuals, fostering a creative mindset that drives innovation and growth. 
             With a keen ability to grasp complex concepts in my field, I strive for excellence in every endeavor. After all, "Second is the first loser."
-            "In the ever-evolving landscape of technology, loyalty to one’s craft and a commitment to continuous learning are the cornerstones of success."
           </p>
           <a href="#projects" className="cta-button animated-button">View My Projects</a>
         </div>
       </header>
 
-      <section id="projects" className="projects-section">
+
+      <section id="projects" className="projects-section fade-in">
         <Projects />
       </section>
 
-      <section className="pie-chart-section">
-        <PieChart /> 
+      <section className="pie-chart-section fade-in">
+        <PieChart />
       </section>
 
       <section className="industry-experience-section">
-        <h2>Industry Experience</h2>
+        <h2 className="section-title fade-in">Industry Experience</h2>
         <div className="industry-list">
-          <div className="industry-item">
-            <img src={plasticIndustryImage} alt="Plastic Industry" />
+          <div className="industry-item fade-in">
+            <img src={plasticIndustryImage} alt="Plastic Industry" className="industry-image" />
             <p className="industry-description">Selling of Granules, Import and Export in the plastic manufacturing sector.</p>
           </div>
-          <div className="industry-item">
-            <img src={electronicVentureImage} alt="Electronics Venture" />
+          <div className="industry-item fade-in">
+            <img src={electronicVentureImage} alt="Electronics Venture" className="industry-image" />
             <p className="industry-description">Co CEO: Involved in electronic item ventures and innovations.</p>
           </div>
         </div>
       </section>
 
       <section className="role-model-section">
-        <h2>Role Model, Not Idol</h2>
+        <h2 className="section-title fade-in">Role Model, Not Idol</h2>
         <blockquote className="quote">
-          "Idolism is the worship of false gods; I seek role models whose dedication inspires." 
+          "Idolism is the worship of false gods; I seek role models whose dedication inspires."
         </blockquote>
-        
-        <div className="role-models">
+        <Carousel
+          infiniteLoop={true}
+          showThumbs={false}
+          showStatus={false}
+          autoPlay={true}
+          interval={5000}
+          className="role-model-carousel fade-in"
+        >
+         
+
           <div className="role-model">
-            <img src={aliImage} alt="Muhammad Ali" className="role-model-image" />
-            <p className="role-model-description">
-              Muhammad Ali, known as "The Greatest," dedicated his life to the sport of boxing and social justice. 
-              His relentless work ethic, exemplified through rigorous training and self-discipline, is a testament to his success. 
-              Ali once said, "I hated every minute of training, but I said, 'Don't quit. Suffer now and live the rest of your life as a champion.'"
-              This approach reflects the Greek philosophy of resilience and dedication—virtues that lead to greatness.
-            </p>
+            <div className="role-model-image-container">
+              <img src={aliImage} alt="Muhammad Ali" className="role-model-image" />
+            </div>
+            <div className="role-model-text">
+              <h3>Muhammad Ali</h3>
+              <p className="role-model-description">
+                Muhammad Ali, known as "The Greatest," dedicated his life to the sport of boxing and social justice.
+                His relentless work ethic, exemplified through rigorous training and self-discipline, is a testament to his success.
+              </p>
+            </div>
           </div>
-          
           <div className="role-model">
-            <img src={ronaldoImage} alt="Cristiano Ronaldo" className="role-model-image" />
-            <p className="role-model-description">
-              Similarly, Cristiano Ronaldo, one of the most celebrated footballers in history, embodies dedication and hard work. 
-              Ronaldo's relentless pursuit of excellence, paired with a disciplined lifestyle, has set him apart in the world of sports. 
-              He emphasizes that "Talent without working hard is nothing." This principle aligns with the teachings of ancient wisdom that stress the importance of discipline and commitment to achieve success.
-            </p>
+            <div className="role-model-image-container">
+              <img src={ronaldoImage} alt="Cristiano Ronaldo" className="role-model-image" />
+            </div>
+            <div className="role-model-text">
+              <h3>Cristiano Ronaldo</h3>
+              <p className="role-model-description">
+                Similarly, Cristiano Ronaldo, one of the most celebrated footballers in history, embodies dedication and hard work.
+              </p>
+            </div>
+            
           </div>
-        </div>
+         
+
+        </Carousel>
       </section>
-
-      <section className="testimonials-section">
-        <h2>Testimonials</h2>
-        <div className="testimonials">
-          <div className="testimonial">
-            <img src={testimonialImage1} alt="Client A" className="testimonial-image" />
-            <p>"Abdullah's work ethic and innovative solutions have greatly benefited our team. His dedication to excellence is unmatched!"</p>
-            <h4>- Client A</h4>
-          </div>
-        </div>
-      </section>
-
-
-      <footer className="footer">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <h2>Contact Me</h2>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit" className="submit-button">Send</button>
-        </form>
-      </footer>
+      
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
