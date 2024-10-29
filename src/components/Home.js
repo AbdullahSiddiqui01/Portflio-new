@@ -35,9 +35,6 @@ const Home = () => {
           </p>
           <a href="#projects" className="cta-button animated-button">View My Projects</a>
         </div>
-        <div className="cartoon-container">
-          <img src={animatedCartoon} alt="Animated Cartoon" className="animated-cartoon" />
-        </div>
       </header>
 
       <section id="projects" className="projects-section fade-in">
