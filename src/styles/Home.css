@@ -2,6 +2,7 @@
   font-family: 'Arial', sans-serif;
   color: #333;
   transition: color 0.3s, background-color 0.3s;
+  top: 0%;
 }
 
 
@@ -9,11 +10,12 @@
 .hero {
   height: 100vh; 
   background: linear-gradient(to bottom right, rgba(12, 3, 45, 0.85), rgba(40, 109, 179, 0.85));
-  color: white;
+  color: rgb(250, 249, 255);
   padding: 100px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  top: 0%;
 }
 
 
@@ -48,7 +50,6 @@
   max-width: 80vw;
   margin: auto;
   position: relative;
-  z-index: 2;
   text-align: center;
 }
 
@@ -80,14 +81,11 @@
 
 
 .industry-experience-section {
-  background-color: #f9f9f9;
   text-align: center;
 }
 
 .section-title {
   font-size: 2rem;
-  margin-bottom: 30px;
-  color: #4a54f1;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -101,7 +99,7 @@
 }
 
 .industry-item {
-  max-width: 50%;
+  width: 30%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
   overflow: hidden;
@@ -221,13 +219,11 @@
 
 .projects {
   padding: 40px 20px;
-  background: linear-gradient(to bottom right, #d2cfda, #186478);
   text-align: center;
 }
 
 .projects h2 {
   font-size: 2.5rem;
-  color: #4a54f1;
   margin-bottom: 30px;
   font-weight: bold;
 }

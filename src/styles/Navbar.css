@@ -4,25 +4,27 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background: linear-gradient(to bottom right, rgba(143, 131, 189, 0.7), rgba(40, 109, 179, 0.7)); /* Transparent gradient background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
   position: sticky;
   top: 0;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
   width: 100%;
   box-sizing: border-box;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   transition: background 0.3s ease; /* Smooth transition for color changes */
 }
 
-/* Other styles remain unchanged */
+/* Navbar Logo */
 .navbar-logo {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  width: 42px;
+  width: 10%;
   height: 42px;
   border-radius: 50%;
   margin-right: 10px;
@@ -30,7 +32,7 @@
 
 .navbar h1 {
   font-size: 1.5rem;
-  color: #FFFFFF; /* Crisp white title */
+  color: #71729c; /* Crisp white title */
   font-weight: 700;
   margin: 0;
 }
@@ -39,7 +41,7 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 28px;
+  gap: 50px;
   margin-left: auto;
 }
 
@@ -48,7 +50,7 @@
 }
 
 .navbar-links a {
-  color: #ECF0F1; /* Soft white for links */
+  color: #6d4d8b; /* Soft white for links */
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -58,7 +60,7 @@
 }
 
 .navbar-links a.home-link {
-  background-color: #3498DB; /* Highlight Home link with vibrant blue */
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight for Home link */
   color: #FFFFFF;
   font-weight: 600;
   border-radius: 12px;
@@ -66,7 +68,7 @@
 
 .navbar-links a:hover {
   color: #FFFFFF; /* Pure white text on hover */
-  background-color: #1ABC9C; /* Elegant teal hover background */
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly opaque hover background */
 }
 
 /* Mobile Toggle Button */
@@ -109,7 +111,9 @@
     width: 100%; /* Full width */
     align-items: center; /* Center align links */
     padding: 15px 0; /* Padding for the mobile menu */
-    background: linear-gradient(to bottom right, rgba(12, 3, 45, 0.7), rgba(40, 109, 179, 0.7)); /* Consistent background */
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for mobile */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
   }
 
   .navbar-links.active {
